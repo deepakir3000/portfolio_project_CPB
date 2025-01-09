@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+  .image-grid{
+      @apply w-72 rounded hover:scale-110 transition duration-1000 border-r-2 brightness-110 cursor-pointer
+  }
+  .btn-primary{
+    @apply px-5 py-2 bg-[#00000066] text-white rounded-3xl hover:bg-neutralDGrey transition-all duration-500 hover:-translate-y-4
+} 
+}
+
