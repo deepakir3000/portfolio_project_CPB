@@ -2,13 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@layer components{
-  .image-grid{
-      @apply w-72 rounded hover:scale-110 transition duration-1000 border-r-2 brightness-110 cursor-pointer
+@layer components {
+  .image-grid {
+    @apply w-72 rounded hover:scale-110 transition duration-1000 border-r-2 brightness-110 cursor-pointer;
   }
-  .btn-primary{
-    @apply px-5 py-2 bg-[#00000066] text-white rounded-3xl hover:bg-neutralDGrey transition-all duration-500 hover:-translate-y-4
-} 
+  .btn-primary {
+    @apply px-5 py-2 bg-[#00000066] text-white rounded-3xl hover:bg-neutralDGrey transition-all duration-500 hover:translate-y-4;
+  }
+  .btn-yellow {
+    @apply px-5 py-2 bg-[#FFDA23] text-black font-medium rounded-3xl hover:bg-[#e3c327] transition-all duration-500 hover:translate-y-4;
+  }
 }
 
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.animate-flip {
+  animation: flip 2s ease-in-out;
+}
